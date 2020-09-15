@@ -1,15 +1,12 @@
 pipeline {
-    agent none
+    agent { label 'master' }
     stages {
-        stage('Build') {
-            agent {
-                docker {
-                    image 'python:2-alpine'
-                }
-            }
+        stage('build') {
             steps {
-                sh 'python -m py_compile sources/add2vals.py sources/calc.py' 
-                stash(name: 'compiled-results', includes: 'sources/*.py*') 
+                echo "Hello World!"
+                sh "echo Hello from the shell"
+                sh "hostname"
+                sh "uptime"
             }
         }
     }
