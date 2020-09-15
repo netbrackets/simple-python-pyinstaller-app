@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 echo "Hello World!"
-                sh "echo Hello from the shell"
+                sh "python script.py"
                 sh "hostname"
                 sh "uptime"
             }
