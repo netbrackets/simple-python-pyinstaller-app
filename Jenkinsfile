@@ -1,7 +1,6 @@
 pipeline {
-    agent { label 'master' }
+    agent { node { label 'python-node-mac' } }
     stages {
-        node('python-node-mac') {
         stage('build') {
             steps {
                 echo "Hello World!"
@@ -10,7 +9,6 @@ pipeline {
                 sh "hostname"
                 sh "uptime"
             }
-          }
         }
     }
 }
