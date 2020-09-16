@@ -2,6 +2,7 @@ pipeline {
     agent { label 'master' }
     stages {
         stage('build') {
+          node('python-node-mac') {
             steps {
                 echo "Hello World!"
                 sh "/usr/bin/python /Users/netBrackets/Documents/GitHub/simple-python-pyinstaller-app/sources/script.py"
@@ -9,6 +10,7 @@ pipeline {
                 sh "hostname"
                 sh "uptime"
             }
+          }
         }
     }
 }
