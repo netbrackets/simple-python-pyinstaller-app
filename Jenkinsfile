@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 echo "Hello World!"
-                sh "/usr/bin/python /Users/netBrackets/Documents/GitHub/simple-python-pyinstaller-app/sources/script.py
+                sh "/usr/bin/python /Users/netBrackets/Documents/GitHub/simple-python-pyinstaller-app/sources/script.py"
                 sh "hostname"
                 sh "uptime"
             }
