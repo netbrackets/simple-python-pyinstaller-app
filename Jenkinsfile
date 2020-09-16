@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 echo "Hello World!"
-                sh "/usr/bin/python script.py"
+                sh "/usr/bin/python sources/script.py"
                 sh "hostname"
                 sh "uptime"
             }
