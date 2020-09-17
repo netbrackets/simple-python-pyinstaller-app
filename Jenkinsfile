@@ -1,5 +1,5 @@
 pipeline {
-    agent { node { label 'python-node-mac' } }
+    agent { node { label 'mini2019' } }
     stages {
         stage('build') {
             steps {
